@@ -14,7 +14,7 @@ public class TransactionService {
     //Find all transactions in the year 2011 and sort them by value, small to high. Lvl: Easy
     public List<Transaction> transactionsBySortedValue(List<Transaction> transactionList) {
         return transactionList.stream()
-                .filter(transaction -> transaction.getYear() == 2011)
+                .filter(transaction -> transaction.getYear() == 2012)
                 .sorted(Comparator.comparing(Transaction::getYear))
                 .collect(Collectors.toList());
     }
@@ -25,6 +25,7 @@ public class TransactionService {
                 .map(transaction -> transaction.getTrader().getCity())
                 .distinct()
                 .collect(Collectors.toList());
+        // Dummy comment
     }
 
     //Find all traders from Cambridge and sort them by name. Lvl: Easy
